@@ -61,23 +61,15 @@ li a:hover {
 .intro p {
 	margin-left: 55%;
 	padding-left: 20px;
-}
+}	
 
-.about {
+.signature {
 	clear: left;
 	padding-top: 0.5em;
 	margin-left: 5%;
 	margin-right: 5%;
 }
 
-.about h3 {
-	font-size: 1.75em;
-}
-
-td {
-	width: 20vw;
-}
-
-.about a {
+.signature a {
 	color: white;
 }

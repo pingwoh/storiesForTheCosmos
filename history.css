@@ -1,11 +1,31 @@
 .header {
 	text-align: center;
 	text-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+	padding-bottom: 0px;
 
 }
 
 h2 {
 	font-size: 3em;
+}
+
+.content a{
+	color: black;
+}
+
+#search {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 30%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  border-radius: 10px;
+  margin-bottom: 4%; /* Add some space below the input */
+  margin-left: 33%;
+  box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+
 }
 
 .left-history {
@@ -32,13 +52,11 @@ h2 {
 
 .left-history:hover {
 	width: 70%;
-	height: 80%;
 	margin-left: 15%;
 }
 
 .right-history:hover {
 	width: 70%;
-	height: 80%;
 }
 
 .left-content {

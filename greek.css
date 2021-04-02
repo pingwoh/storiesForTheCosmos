@@ -34,7 +34,7 @@ body {
 }
 
 ul {
-  list-style-type: none50  margin: 0;
+  list-style-type: none;
   padding: 0;
   overflow: hidden;
   background-color: white;
@@ -56,7 +56,8 @@ li a {
 }
 
 li a:hover {
-  background-color: gold;
+  background-color: navy;
+  color: white;
 }
 
 .active {

@@ -1,0 +1,54 @@
+.header {
+	text-align: center;
+	text-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.left-history {
+	margin-left: 20%;
+	width: 60%;
+	height: 75%;
+	background-color: white;
+	border-radius: 2em;
+	padding: 1.5em;
+	text-align: center;
+	box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.right-history {
+	width: 60%;
+	height: 75%;
+	margin-left: 100%;
+	background-color: white;
+	border-radius: 2em;
+	padding: 1.5em;
+	text-align: center;
+	box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 10px darkblue;
+}
+
+.left-history:hover {
+	width: 70%;
+	height: 80%;
+	margin-left: 15%;
+}
+
+.right-history:hover {
+	width: 70%;
+	height: 80%;
+}
+
+.left-content {
+	padding-bottom: 5%;
+	width: 50%;
+	height: 25%;
+}
+
+.right-content {
+	padding-bottom: 5%;
+	width: 50%;
+	height: 25%;
+}
+
+.content {
+	color: black;
+	margin-bottom: 5vh;
+}

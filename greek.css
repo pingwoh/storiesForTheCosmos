@@ -2,14 +2,16 @@ html {
 	background-image: url("stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a {
+  text-decoration: none;
 
 }
 
-
 .header {
-    margin-top: 2em;
-	padding-bottom: 2em;
-	
+  margin-top: 2em;
+	padding-bottom: 2em;	
 }
 
 .header h1{
@@ -17,9 +19,11 @@ html {
     text-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
     font-size: 60px;
 }
+
 .header img{
     max-height: 70px;
     margin-left: .5em;
+
 }
 body {
 	color: white;

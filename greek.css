@@ -45,10 +45,6 @@ ul {
 
 li {
   float: left;
-  font-size: 1.25em;
-  font-weight: bold;
-  text-shadow: 0.5px 1px black;
-
 }
 
 li a {

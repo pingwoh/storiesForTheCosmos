@@ -1,0 +1,17 @@
+.star{
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  width: 250px;
+  padding: 10px;
+  border: 3px solid darkblue;
+  border-radius: 1em;
+  box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+  background-color: white;
+  color: darkblue;
+}

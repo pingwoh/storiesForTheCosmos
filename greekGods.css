@@ -1,0 +1,74 @@
+.header {
+	text-align: center;
+	text-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+	padding-bottom: 0px;
+
+}
+
+h1{
+    text-align: center;
+	text-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+	padding-bottom: 0px;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+.content {
+	color: black;
+	margin-bottom: 5em;
+}
+
+.content a{
+	color: black;
+}
+
+
+.left-circle {
+	margin-left: 20%;
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border-radius: 50%;
+	padding: 1.5em;
+	text-align: center;
+	box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 20px darkblue;
+}
+
+.right-circle {
+	width: 200px;
+	height: 200px;
+	margin-left: 50%;
+	background-color: white;
+	border-radius: 50%;
+	padding: 1.5em;
+	text-align: center;
+	box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 10px darkblue;
+}
+
+.left-circle:hover {
+	width: 210px;
+    height: 210px;
+	margin-left: 15%;
+    font-size:120%;
+    box-shadow: 2px 2px 4px black, 0 0 25px yellow, 0 0 20px orange;
+}
+
+.left-circle a:hover{
+    font-size:150%;
+    color: orange;
+}
+
+.right-circle:hover {
+	width: 210px;
+    height: 210px;
+	margin-left: 50%;
+    font-size:120%;
+    box-shadow: 2px 2px 4px black, 0 0 25px yellow, 0 0 20px orange;
+}
+
+.right-circle a:hover{
+    font-size:150%;
+    color: orange;
+}

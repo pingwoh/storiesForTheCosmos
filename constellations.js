@@ -6,7 +6,7 @@ function getXY(item)
 {
   var x = item.clientHeight + 1200;
 	var y = item.clientWidth + 700;
-	var randomX = Math.floor(Math.random()*x + 300);
+	var randomX = Math.floor(Math.random()*x + 350);
 	var randomY = Math.floor(Math.random()*y + 200);
   return [randomX, randomY];
 }

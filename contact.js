@@ -2,13 +2,13 @@
 
 function verify()
 {
-	var fname = getElementById("fname");
-	var lname = getElementById("lname");
-	var email = getElementById("email");
+	var fname = getElementById("fname").value;
+	var lname = getElementById("lname").value;
+	var email = getElementById("email").value;
 
 	if ((fname == "") || (lname == "") || (email == ""))
 	{
-		alert("Empty field, please fill all fields!");
+		alert("Please fill in all fields!");
 	}
 
 }

@@ -2,14 +2,15 @@
 
 function verify()
 {
-	alert("Hello")
-	// var fname = getElementById("fname").value;
-	// var lname = getElementById("lname").value;
-	// var email = getElementById("email").value;
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var email = document.getElementById("email").value;
+	var feedback = document.getElementById("feedback").innerText;
 
-	// if ((fname == "") || (lname == "") || (email == ""))
-	// {
-	// 	alert("Please fill in all fields!");
-	// }
+
+	if ((fname == "") || (lname == "") || (email == "") || (feedback == ""))
+	{
+		alert("Please fill in all fields!")
+	}
 
 }

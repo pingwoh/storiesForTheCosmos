@@ -9,7 +9,7 @@
     <link href="greek.css" rel="stylesheet">
     <link href="quiz.css" rel="stylesheet">
     <link rel="icon" href="IMG_1845.png">
-</head> 
+</head>
 
 <body>
 <div class="header">
@@ -32,7 +32,7 @@
     <div class="quiz-form">
     	<form method="post" action="quizQuestions.php">
     		<br>
-    		Name: <input type="text" name="name"/>
+    		Name: <input type="text" name="name" required/>
     		<br>
     		<label">When was Sparta founded?</label>
          <br>

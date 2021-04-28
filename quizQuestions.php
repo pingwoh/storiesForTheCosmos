@@ -32,7 +32,7 @@
     <div class="quiz-form">
     	<form method="post" action="quizQuestions.php">
     		<br>
-    		Name: <input type="text" name="name"/>
+    		Name: <input type="text" name="name" placeholder="Enter your name.." />
     		<br>
     		<label">When was Sparta founded?</label>
          <br>
@@ -76,6 +76,10 @@ if (!isset($_POST['name'])) {
 else {
 	$name = $_POST['name'];
 	setcookie('name', $name);
+
+	if ($name == "") {
+	echo "<script>alert('Please enter a name.');</script>";
+}
 
 	// Optionally store the parameters in variables
 	$server = "spring-2021.cs.utexas.edu";

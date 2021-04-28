@@ -1,10 +1,3 @@
-<?php
-session_start();
-$name = $_SESSION['name'];
-$numCorrect = $_SESSION['numCorrect'];
-
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">

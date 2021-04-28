@@ -31,6 +31,8 @@
     </div>
     <div class="contact-form">
  <?php
+ error_reporting(E_ERROR | E_PARSE);
+
 
  if(isset($_COOKIE["played"])) {
      //you've already played - display score? or just scoreboard?

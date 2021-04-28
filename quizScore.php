@@ -29,7 +29,7 @@ $numCorrect = $_SESSION['numCorrect'];
 		  <li><a href="constellations.html">Constellations</a></li>
 		  <li><a href="history.html">History</a></li>
 		  <li><a href="mediaRepresent.html">Media</a></li>
-		  <li><a href="quiz.php">Quiz</a></li>
+		  <li><a href="quizQuestions.php">Quiz</a></li>
 		  <li style="float:right"><a href="contactUs.html">About</a></li>
 		</ul>
 	</div>

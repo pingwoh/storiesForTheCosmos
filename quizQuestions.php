@@ -9,7 +9,7 @@
     <link href="greek.css" rel="stylesheet">
     <link href="quiz.css" rel="stylesheet">
     <link rel="icon" href="IMG_1845.png">
-</head>
+</head> 
 
 <body>
 <div class="header">

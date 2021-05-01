@@ -8,6 +8,27 @@
 	<meta name="description" content="ENTER DESCRIPTION HERE">
     <link href="greek.css" rel="stylesheet">
     <link href="quiz.css" rel="stylesheet">
+    <script>
+	function showLeaders() {
+	    // Creating the XMLHttpRequest object
+	    var request = new XMLHttpRequest();
+	    
+	    // Instantiating the request object
+	    request.open("POST", "leaderboard.php");
+	    
+	    // Defining event listener for readystatechange event
+	    request.onreadystatechange = function() {
+	        // Check if the request is compete and was successful
+	        if(this.readyState === 4 && this.status === 200) {
+	            // Inserting the response from server into an HTML element
+	            document.getElementById("result").innerHTML = this.responseText;
+	        }
+	    };	   
+
+	    // Sending the request to the server
+	    request.send();
+	}
+	</script>
     <link rel="icon" href="IMG_1845.png">
 </head> 
 
@@ -36,35 +57,38 @@
     		<br>
     		<label">When was Sparta founded?</label>
          <br>
-             <label><input type="radio" name="q1" value="correct"> 900 BCE</label>
-             <label><input type="radio" name="q1" value=""> 800 BCE</label>
-             <label><input type="radio" name="q1" value=""> 200 BCE</label>
-             <label><input type="radio" name="q1" value=""> 1000 BCE</label>
+             <label><input type="radio" name="q1" value="q11"> 900 BCE</label>
+             <label><input type="radio" name="q1" value="q12"> 800 BCE</label>
+             <label><input type="radio" name="q1" value="q13"> 200 BCE</label>
+             <label><input type="radio" name="q1" value="q14"> 1000 BCE</label>
          <br> <br>
          <label>What constellation is not an offical constellation, but rather a small part of a larger one?</label>
          <br>
-             <label><input type="radio" name="q2" value=""> Draco</label>
-             <label><input type="radio" name="q2" value=""> Ursa Major</label>
-             <label><input type="radio" name="q2" value=""> Andromeda</label>
-             <label><input type="radio" name="q2" value="correct"> The Big Dipper</label>
+             <label><input type="radio" name="q2" value="q21"> Draco</label>
+             <label><input type="radio" name="q2" value="q22"> Ursa Major</label>
+             <label><input type="radio" name="q2" value="q23"> Andromeda</label>
+             <label><input type="radio" name="q2" value="q24"> The Big Dipper</label>
          <br> <br>
          <label>Who are the twin Gods?</label>
          <br>
-             <label><input type="radio" name="q3" value="correct"> Apollo & Artemis</label>
-             <label><input type="radio" name="q3" value=""> Poseidon & Hades</label>
-             <label><input type="radio" name="q3" value=""> Aphrodite & Ares</label>
-             <label><input type="radio" name="q3" value=""> Chaos & Heaven</label>
+             <label><input type="radio" name="q3" value="q31"> Apollo & Artemis</label>
+             <label><input type="radio" name="q3" value="q32"> Poseidon & Hades</label>
+             <label><input type="radio" name="q3" value="q33"> Aphrodite & Ares</label>
+             <label><input type="radio" name="q3" value="q34"> Chaos & Heaven</label>
          <br> <br>
          <label for="">Which adaptation is inspired the myth of Prometheus?</label>
          <br>
-             <label><input type="radio" name="q4" value="">Lore Olympus</label>
-             <label><input type="radio" name="q4" value="correct">Frankenstein</label>
-             <label><input type="radio" name="q4" value="">Hercules</label>
-             <label><input type="radio" name="q4" value="">Battlestar Galactica</label>
+             <label><input type="radio" name="q4" value="q41">Lore Olympus</label>
+             <label><input type="radio" name="q4" value="q42">Frankenstein</label>
+             <label><input type="radio" name="q4" value="q43">Hercules</label>
+             <label><input type="radio" name="q4" value="q44">Battlestar Galactica</label>
          <br>
          <br> <br>
          <input type="submit" value="Submit"/>
     	</form>
+    	<button type = "button" onclick="showLeaders()">Show Leaderboard</button>
+    </div>
+    <div id="result">
     </div>
 </body>
 </html>
@@ -97,16 +121,16 @@ else {
 		$q3 = $_POST['q3'];
 		$q4 = $_POST['q4'];
 		$numCorrect = 0;
-		if ($q1 == 'correct') {
+		if ($q1 == 'q11') {
 		$numCorrect++;
 		}
-		if ($q2 == 'correct') {
+		if ($q2 == 'q24') {
 			$numCorrect++;
 		}
-		if ($q3 == 'correct') {
+		if ($q3 == 'q31') {
 			$numCorrect++;
 		}
-		if ($q3 == 'correct') {
+		if ($q3 == 'q42') {
 			$numCorrect++;
 		}
 

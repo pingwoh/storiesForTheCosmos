@@ -78,3 +78,7 @@ h2 {
 	color: black;
 	margin-bottom: 5vh;
 }
+
+iframe {
+	width: 100%;
+}

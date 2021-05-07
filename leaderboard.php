@@ -16,12 +16,19 @@ die('Connect Error: ' . $mysqli->connect_errno .
 $sql = "SELECT * FROM scores ORDER BY score DESC";
 $result = $mysqli->query($sql);
 
-echo "<table>";
-echo "<tr><th>Name</th><th>Score</th></tr>";
+echo "<table style='width: 75%;
+	margin: auto;'>";
+echo "<tr style='font-size: 1.5rem; padding: 20px;'><th>Name</th><th>Score</th></tr>";
 while ($resultRow = $result->fetch_row()) {
     echo "<tr>";
     for($i = 0; $i < $result->field_count; $i++){
-        echo "<td class='scores'>$resultRow[$i]</td>";
+        echo "<td style='border-radius: 0px;
+	font-size: 1.5rem;
+	border: 1px solid black;
+	background: #b8d2ff;
+	padding: 20px;
+	color: black;
+	text-align: center;'>$resultRow[$i]</td>";
     }
     echo "</tr>";
 }

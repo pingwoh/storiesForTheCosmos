@@ -38,10 +38,8 @@ if(!isset($_COOKIE['name'])) {
 } else {
   //echo "Cookie '" . 'name' . "' is set!<br>";
   //echo "Value is: " . $_COOKIE['name'] . "<br>";
-  echo $_COOKIE['name'] . " scored a " . $_COOKIE['score'] . "/4!<br>";
-  echo "You have been added to the scores list below.";
-  setcookie("name", "", time() - 3600);
-  setcookie("score", "", time() - 3600);
+  echo "<p style='text-align: center; font-size: 1.5rem;'>" . $_COOKIE['name'] . " scored a " . $_COOKIE['score'] . "/4!<br>" . "</p>";
+  echo "<p style='text-align: center; font-size: 1.5rem;'>" . "You have been added to the scores list below." . "</p>";
 }
 
 
@@ -67,12 +65,19 @@ if(!isset($_COOKIE['name'])) {
 	$sql = "SELECT * FROM scores ORDER BY score DESC";
 	$result = $mysqli->query($sql);
 
-	echo "<table>";
-	echo "<tr><th>Name</th><th>Score</th></tr>";
+	echo "<table style='width: 75%;
+	margin: auto;'>";
+	echo "<tr style='font-size: 1.5rem; padding: 20px;'><th>Name</th><th>Score</th></tr>";
 	while ($resultRow = $result->fetch_row()) {
 	    echo "<tr>";
 	    for($i = 0; $i < $result->field_count; $i++){
-	        echo "<td class='scores'>$resultRow[$i]</td>";
+	        echo "<td style='border-radius: 0px;
+	font-size: 1.5rem;
+	border: 1px solid black;
+	background: #b8d2ff;
+	padding: 20px;
+	color: black;
+	text-align: center;'>$resultRow[$i]</td>";
 	    }
 	    echo "</tr>";
 	}

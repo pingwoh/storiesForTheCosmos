@@ -86,6 +86,8 @@
          <br> <br>
          <input type="submit" value="Submit"/>
     	</form>
+    	<br>
+    	<br><br>
     	<button type = "button" onclick="showLeaders()">Show Leaderboard</button>
     </div>
     <div id="result">
@@ -95,11 +97,12 @@
 
 
 <?php
+if (!isset($_COOKIE['name'])) {
 if (!isset($_POST['name'])) {
 }
 else {
 	$name = $_POST['name'];
-	setcookie('name', $name);
+	setcookie('name', $name, time() + 3600);
 
 	if ($name == "") {
 	echo "<script>alert('Please enter a name.');</script>";
@@ -114,6 +117,7 @@ else {
 	$mysqli = new mysqli($server, $user, $pwd, $dbName);
 	$result = $mysqli->query("SELECT name FROM scores WHERE name = '$name'");
 	if(!$result->num_rows == 0) {
+		setcookie('name', $name, time() - 3600);
 	     echo "<script>alert('You have already taken the quiz!');</script>";
 	} else {
 	    $q1 = $_POST['q1'];
@@ -142,8 +146,7 @@ else {
 		": " . $mysqli->connect_error);
 		}
 
-		$sql = "INSERT INTO scores
-		VALUE ('$name', $numCorrect)";
+		$sql = "INSERT INTO scores VALUES ('$name', $numCorrect)";
 
 		if ($mysqli->query($sql) === TRUE) {
 		  echo "New record created successfully";
@@ -151,21 +154,19 @@ else {
 		  echo "Error: " . $sql . "<br>" . $mysqli->error;
 		}
 
-		$mysqli->close();
-
 
 		setcookie('score', $numCorrect);
 		header('Location: ./quizScore.php');
 
 
 	}
-
-
-
-
+	$mysqli->close();
 }
 
-
+}
+else {
+	header('Location: ./quizScore.php');
+}
 
 
 ?>

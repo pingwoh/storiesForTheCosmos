@@ -1,5 +1,6 @@
 .star{
   position: absolute;
+  z-index: 0;
 }
 
 .hidden {
@@ -15,6 +16,8 @@ p {
   background-color: white;
   color: darkblue;
   font-size: 20px;
+  position: absolute;
+  z-index: -1;
 }
 
 .header {

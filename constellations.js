@@ -1,5 +1,4 @@
 var stars = document.getElementsByClassName("star");
-
 randomizePositions();
 
 function getXY(item)
@@ -35,5 +34,10 @@ function turnWhite(event)
 function expand()
 {
   element = event.currentTarget;
-  element.children[1].classList.toggle("hidden");
+  text = element.children[1];
+  text.classList.toggle("hidden");
+  console.log("old index is : " + element.style.zIndex);
+  newIndex = (element.style.zIndex == "10" ? "0" : "10");
+  console.log("new index is: " + newIndex);
+  element.style.zIndex = newIndex;
 }
